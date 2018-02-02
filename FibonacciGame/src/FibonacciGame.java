@@ -73,12 +73,14 @@ public class FibonacciGame {
 			int rowIndex = 0;
 			while (q.size() >= 2) {
 				int x = q.poll();
-				int y = q.poll();
-				if (isFibonacciNumber(x + y))
+				//int y = q.poll();
+				int y=q.peek();
+				if (isFibonacciNumber(x + y)) {
 					completeCol[rowIndex++] = x + y;
-				else {
+					q.poll();
+				}else {
 					completeCol[rowIndex++] = x;
-					completeCol[rowIndex++] = y;
+					//completeCol[rowIndex++] = y;
 				}
 			}
 			while (!q.isEmpty()) {
@@ -106,12 +108,14 @@ public class FibonacciGame {
 			int rowIndex = 0;
 			while (q.size() >= 2) {
 				int x = q.poll();
-				int y = q.poll();
-				if (isFibonacciNumber(x + y))
+				//int y = q.poll();
+				int y = q.peek();
+				if (isFibonacciNumber(x + y)) {
 					completeCol[rowIndex++] = x + y;
-				else {
+					q.poll();
+				}else {
 					completeCol[rowIndex++] = x;
-					completeCol[rowIndex++] = y;
+					//completeCol[rowIndex++] = y;
 				}
 			}
 			while (!q.isEmpty()) {
@@ -139,13 +143,14 @@ public class FibonacciGame {
 			int colIndex = 0;
 			while (q.size() >= 2) {
 				int x = q.poll();
-				int y = q.poll();
-				if (isFibonacciNumber(x + y))
+				//int y = q.poll();
+				int y = q.peek();
+				if (isFibonacciNumber(x + y)) {
 					completeRow[colIndex++] = x + y;
-				else {
+					q.poll();
+				}else {
 					completeRow[colIndex++] = x;
-					completeRow[colIndex++] = y;
-					;
+					//completeRow[colIndex++] = y;
 				}
 
 			}
@@ -174,13 +179,14 @@ public class FibonacciGame {
 			int colIndex = 0;
 			while (q.size() >= 2) {
 				int x = q.poll();
-				int y = q.poll();
-				if (isFibonacciNumber(x + y))
+				//int y = q.poll();
+				int y = q.peek();
+				if (isFibonacciNumber(x + y)) {
 					completeRow[colIndex++] = x + y;
-				else {
+					q.poll();
+				}else {
 					completeRow[colIndex++] = x;
-					completeRow[colIndex++] = y;
-					;
+					//completeRow[colIndex++] = y;
 				}
 
 			}
