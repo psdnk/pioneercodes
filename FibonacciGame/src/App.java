@@ -1,5 +1,5 @@
 /**
- * @author prasadnaik
+ * @author prasad naik
  *
  */
 import java.util.Scanner;
